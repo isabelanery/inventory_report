@@ -9,14 +9,18 @@ def test_relatorio_produto():
     instrucoes_de_armazenamento = 'em local fresco'
     numero_de_serie = 131313
 
-    report = (f"O produto {nome_do_produto}"
-        f" fabricado em {data_de_fabricacao}"
-        f" por {nome_da_empresa} com validade"
-        f" até {data_de_validade}"
-        f" precisa ser armazenado {instrucoes_de_armazenamento}.")
+    report = (f"O produto {nome_do_produto} fabricado em {data_de_fabricacao} "
+              f"por {nome_da_empresa} com validade até {data_de_validade} "
+              f"precisa ser armazenado {instrucoes_de_armazenamento}.")
 
     product = Product(
-        13, nome_do_produto, nome_da_empresa, data_de_fabricacao, data_de_validade, numero_de_serie, instrucoes_de_armazenamento
+        13,
+        nome_do_produto,
+        nome_da_empresa,
+        data_de_fabricacao,
+        data_de_validade,
+        numero_de_serie,
+        instrucoes_de_armazenamento
     )
 
     assert repr(product) == report
