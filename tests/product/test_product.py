@@ -11,5 +11,5 @@ def test_cria_produto():
     assert product.nome_da_empresa == 'Baggio'
     assert product.data_de_fabricacao == '23/10/22'
     assert product.data_de_validade == '23/01/23'
-    assert product.numero_de_serie == '131313'
+    assert product.numero_de_serie == 131313
     assert product.instrucoes_de_armazenamento == 'em local fresco'
