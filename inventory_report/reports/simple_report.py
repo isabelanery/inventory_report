@@ -44,5 +44,3 @@ class SimpleReport:
             f"Data de validade mais próxima: {closest_expiration_date}\n"
             f"Empresa com mais produtos: {companies_products_count}"
         )
-
-
