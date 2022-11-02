@@ -14,8 +14,7 @@ class Inventory:
         if path.endswith('.json'):
             return cls.read_json(path)
 
-        if path.endswith('.xlm'):
-            print('>>>>>>>>>>>XML', cls.read_xml(path))
+        if path.endswith('.xml'):
             return cls.read_xml(path)
 
     @classmethod
