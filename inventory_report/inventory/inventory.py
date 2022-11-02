@@ -8,7 +8,6 @@ from inventory_report.reports.complete_report import CompleteReport
 class Inventory:
     @classmethod
     def read_file(cls, path):
-        products_data = []
         if path.endswith('.csv'):
             return cls.read_csv(path)
 
@@ -23,7 +22,11 @@ class Inventory:
     def import_data(cls, path, report_type):
         products_data = cls.read_file(path)
 
-        return SimpleReport.generate(products_data) if report_type == 'simples' else CompleteReport.generate(products_data)
+        if report_type == 'simples':
+            return SimpleReport.generate(products_data)
+
+        if report_type == 'completo':
+            return CompleteReport.generate(products_data)
 
     @staticmethod
     def read_csv(path):
